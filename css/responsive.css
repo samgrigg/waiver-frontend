@@ -1,0 +1,91 @@
+/* Media queries
+---------------------------------------- */
+
+/* ====================================== */
+/* = iPad landscape, desktop and larger = */
+/* ====================================== */
+@media only screen and (min-width: 960px) {
+	.container {
+		height:768px;
+		overflow:auto;
+	}
+	
+	#waiver {float:left;}
+	#deals {float:left;}
+}
+
+/* ===================== */
+/* = iPhone, Landscape = */
+/* ===================== */
+@media only screen and (max-width:480px) {
+	.container {
+		width:470px;
+		height:320px;
+	}
+}
+
+/* ==================== */
+/* = iPhone, Portrait = */
+/* ==================== */
+@media only screen and (min-width:320px) {
+	.container {
+		width:330px;
+		height:480px;
+	}
+}
+
+/* ================= */
+/* = iPad portrait = */
+/* ================= */
+@media only screen and (min-width: 580px) {
+	.container {
+		width:768px;
+		background:url('../images/trampboard@768x1024.jpg') no-repeat top left;
+		height:1024px;
+	}
+	
+	#thank_you .container {
+		background:url('../images/jimmy@768x1024.jpg') no-repeat top left;
+	}
+}
+
+/* Removes iPhone optimization */
+/*@media only screen and (min-width: 390px) {
+	.container { width: 380px; }
+}
+@media only screen and (min-width: 580px) { 
+	.container { width: 570px; }
+}
+@media only screen and (min-width: 770px) { 
+	.container { width: 760px; }
+}
+@media only screen and (min-width: 960px) { 
+	.container { width: 950px; }
+}
+@media only screen and (min-width: 1150px) { 
+	.container { width: 1140px; }
+}
+@media only screen and (min-width: 1340px) { 
+	.container { width: 1330px; }
+}
+@media only screen and (min-width: 1530px) { 
+	.container { width: 1520px; }
+}
+@media only screen and (min-width: 1720px) { 
+	.container { width: 1710; }
+}
+@media only screen and (min-width: 1910px) { 
+	.container { width: 1900px; }
+}
+@media only screen and (min-width: 2100px) { 
+	.container { width: 2090px; }
+}
+@media only screen and (min-width: 2290px) { 
+	.container { width: 2280px; }
+}
+@media only screen and (min-width: 2480px) { 
+	.container { width: 2470px; }
+}
+@media only screen and (min-width: 2670px) { 
+	.container { width: 2660px; }*/
+}

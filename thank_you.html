@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Get Air Sportsplex: Thank You!</title>
+		
+		<link type="text/css" rel="stylesheet" href="css/site.css"></link>
+		<link type="text/css" rel="stylesheet" href="css/responsive.css"></link>
+	</head>
+	<body id="thank_you">
+		<div id="fb-root"></div>
+		<script>
+		
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		
+		function fbLoginStatus(response) {
+		     console.log('fbLoginStatus',response)
+		  }
+		
+		window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '426487580710526', // App ID
+		      channelUrl : '//channel.html', // Channel File
+		      status     : true, // check login status
+		      cookie     : true, // enable cookies to allow the server to access the session
+		      xfbml      : true  // parse XFBML
+		    });
+		
+			FB.getLoginStatus(fbLoginStatus);
+		    FB.Event.subscribe('auth.statusChange', fbLoginStatus);
+		  };
+		
+		</script>
+
+		<div class="container">
+			<header>
+				<h1>Thank <span>You!</span></h1>
+				<p>Your waiver has been accepted.</p>
+				<a id="back_to_welcome" href="index.html">back to the welcome screen</a>
+			</header>
+			<div class="body">
+				
+				<div id="facebook_box">
+					<h2 id="get_some_jimmy_deals">Get some Jimmy Deals</h2>
+					
+					<div id="call_to_action">
+						<p>Like  us on Facebook, get a <strong>free one hour</strong> jump pass!</p>
+					</div>
+					
+					<div id="facebook_btn">
+						<div id="like_us">
+							<div class="fb-like" data-href="http://www.facebook.com/getairsportsplex" data-send="false" data-width="450" data-show-faces="false"></div>
+						</div>
+					</div>
+					
+					<div id="deal_email"></div>
+				</div>
+				
+				<div id="please_log_out">
+					<h2><a href="http://facebook.com">Please log out of your Facebook account</a></h2>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

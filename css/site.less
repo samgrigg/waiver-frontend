@@ -1,0 +1,316 @@
+@red_color:#fe304c;
+@blue_color:#30dafe;
+@yellow_color:#f8ef22;
+@gold_color:#fedc7c;
+
+body {
+	margin:0;
+	padding:0;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.clearfixed(@content:".") {
+	content:@content;
+	display:block;
+	clear:both;
+	height:0;
+	position:absolute;
+	visibility:hidden;
+}
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/Chunkfive-webfont.eot');
+    src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sans_serif {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+	font-family:"ChunkFiveRegular";
+	h1 {
+		padding:22px 0 0 3px;
+		margin:0;
+		font-size:112px;
+		line-height:72px;
+		height:144px;
+		color:@gold_color;
+				
+		span {
+			display:block;
+		}
+	}
+	p {
+		margin:0;
+		font-size:18px;
+		color:#fff;
+	}
+}
+
+
+.body {
+	::after {
+		.clearfixed;
+	}
+}
+
+.logo {
+	background:url('../images/logo_w_glow.png') no-repeat top left;
+	width:140px;
+	height:150px;
+	display:block;
+	margin:0 auto;
+}
+
+#buttons {
+	margin-top:456px;
+	padding:0 40px;
+	font-family:"ChunkFiveRegular";
+	font-size:16px;
+	span {
+		.sans_serif;
+		display:block;
+		font-size:12px;
+	}
+	::after {
+		.clearfixed;
+	}
+	#waiver, #deals {
+		display:block;
+		width:7em;
+		padding:.25em 1em;
+		min-height:44px;
+		width:256px;
+		text-decoration:none;
+		text-align:center;
+		padding-top:15px;
+
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+	}
+	#waiver {
+		background-color:@red_color;
+		color:#fff;
+		float:left;
+	}
+	#waiver:hover {
+		background-color:#ff6e79;
+		color:#333;
+	}
+	#deals {
+		background-color:@blue_color;
+		float:right;
+		color:#000;
+		strong, span {
+			color:@yellow_color;
+		}
+	}
+	#deals:hover {
+		background-color:#6eecff;
+	}
+}
+
+/* =============== */
+/* = Waiver Form = */
+/* =============== */
+fieldset {
+	border:none;
+	margin-bottom:1em;
+	legend {
+		font-family:"ChunkFiveRegular";
+		color:#fff;
+		font-size:1.5em;
+	}
+}
+fieldset:not(#waiver_acceptance) {
+	margin-left:250px;
+	position:relative;
+	legend {
+		position:absolute;
+		top:8px;
+		left:-240px;
+		width:240px;
+		padding-right:10px;
+		text-align:right;
+		float:left;
+	}
+}
+.sigPad .sigNav {
+	position:absolute;
+	top:2em;
+	left:-250px;
+	width:250px;
+	text-align:right;
+	margin:0;padding:0;
+	a {
+		color:#fff;
+		.sans_serif;
+	}
+}
+.sigNav a.current,
+.sigNav a.current:link,
+.sigNav a.current:visited {
+	color: @red_color;
+	font-weight:bold;
+}
+.field {
+	position:relative;
+	margin-bottom:.75em;
+	label {
+		font-family:"ChunkFiveRegular";
+		position:absolute;
+		top:8px;
+		left:10px;
+		color:#666;
+	}
+	input[type=text] {
+		padding:5px;
+		width:200px
+	}
+}
+.field.written_in {
+	label {
+		display:none;
+	}
+}
+.field.select, 
+.field.checkbox,
+.field.signature {
+	label {
+		position:static;
+		
+		color:#fff;
+	}
+}
+
+.address_fields {
+	::after {
+		.clearfixed;
+	}
+	.address input {
+		width:300px;
+	}
+	.address {
+		float:left;
+		margin-right:1em;
+	}
+	.address2 {
+		float:left;
+		input {
+			width:4em;
+		}
+	}
+	.city {
+		clear:left;
+		float:left;
+		margin-right:1em;
+		input {
+			width:10em;
+		}
+	}
+	.zip {
+		float:left;
+		input {
+			width:5em;
+		}
+	}
+}
+
+#waiver_contents {
+	background-color:#fff;
+	padding:1em;
+	height:200px;
+	overflow:auto;
+}
+#submit_waiver {
+	font-family:"ChunkFiveRegular";
+	font-size:16px;
+	
+	display:block;
+	width:7em;
+	padding:.25em 1em;
+	width:256px;
+	text-decoration:none;
+	text-align:center;
+	padding:15px 0;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:none;
+	
+	background-color:@red_color;
+	color:#fff;
+}
+
+/* ================== */
+/* = Thank You Page = */
+/* ================== */
+header {
+	position:relative;
+}
+#back_to_welcome {
+	position:absolute;
+	top:2em;
+	right:1em;
+	color:#30dafe;
+	text-decoration:none;
+}
+
+#facebook_box {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:1px solid #666;
+	
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;
+	
+	background-color:#fff;
+	
+	width:512-20px;
+	margin:0 auto;
+	margin-top:256px;
+	
+	#get_some_jimmy_deals {
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		border-bottom-left-radius:0;
+		border-bottom-right-radius:0;
+		
+		padding:10px 0;
+		
+		font-family:"ChunkFiveRegular";
+		font-size:36px;
+		color:@gold_color;
+		background-color:@red_color;
+		margin:0;
+		text-align:center;
+	}
+	
+	#call_to_action, #facebook_btn {
+		margin:10px;
+	}
+}
+
+#please_log_out{
+	background-color:@yellow_color;
+	text-align:center;
+	padding:15px 0;
+	margin-top:256px;
+	
+	a {
+		color:#000;
+	}
+}

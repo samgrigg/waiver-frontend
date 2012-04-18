@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Get Air Sportsplex Waiver</title>
+		
+		<link type="text/css" rel="stylesheet" href="css/site.css"></link>
+		<link type="text/css" rel="stylesheet" href="css/responsive.css"></link>
+		<link type="text/css" rel="stylesheet" href="css/jquery.signaturepad.css"></link>
+		
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.signaturepad.min.js"></script>
+		<script type="text/javascript" src="js/json2.min.js"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+				$('.sigPad').signaturePad();
+				
+				$('.field input[type=text]').focus(function() {
+					$(this).parent().addClass('written_in');
+				
+				})
+				$('.field input[type=text]').blur(function() {
+					$this = $(this);
+					if (!$this.val()) {
+						$(this).parent().removeClass('written_in');
+					};
+				});
+				
+				$('#submit_waiver').click(function(e) {
+					console.log('submit the waiver');
+					$(this).parents('form').submit();
+					
+					e.preventDefault();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Waiver</h1>
+			</header>
+			<div class="body">
+				<form id="waiver_form" action="thank_you.html" method="post">
+					<!-- ===================== -->
+					<!-- = Basic Information = -->
+					<!-- ===================== -->
+					<fieldset id="basic_information">
+						<legend>Basic Information</legend>
+						<div class="field text">
+							<label for="first_name">First Name</label>
+							<input type="text" id="first_name" />
+						</div>
+						
+						<div class="field text">
+							<label for="last_name">Last Name</label>
+							<input type="text" id="last_name" />
+						</div>
+						
+						<div class="field text">
+							<label for="email_address">Email Address</label>
+							<input type="email" id="email_address" />
+						</div>
+						
+						<div class="field select">
+							<label for="date_of_birth">Date of Birth </label>
+							<div class="birth_fields">
+								<select class="month"><option>Month</option></select>
+								<select class="date"><option>Date</option></select>
+								<select class="year"><option>Year</option></select>
+							</div>
+						</div>
+						
+						<div class="field select">
+							<label for="driver_licence_state">Driver Licence State</label>
+							<select id="driver_licence_state">
+								<option>Utah</option>
+							</select>
+						</div>
+					</fieldset>
+					
+					<!-- ======================= -->
+					<!-- = Contact Information = -->
+					<!-- ======================= -->
+					<fieldset id="contact_information">
+						<legend>Contact Information</legend>
+						<div class="address_fields">
+							<div class="field text address">
+								<label for="mailing_adress">Mailing Address</label>
+								<input type="text" />
+							</div>
+							<div class="field text address2">
+								<label for="apartment_number">Apt #</label>
+								<input type="text" />
+							</div>
+							<div class="field text city">
+								<label for="city">City</label>
+								<input type="text" />
+							</div>
+							<div class="field text zip">
+								<label for="zip">Zip</label>
+								<input type="text" />
+							</div>
+						</div>
+					</fieldset>
+					
+					<!-- ===================== -->
+					<!-- = Minor Information = -->
+					<!-- ===================== -->
+					<fieldset id="minor_information">
+						<legend>Minor Information</legend>
+						<div class="field text">
+							<label for="first_name">First Name</label>
+							<input type="text" id="first_name" />
+						</div>
+						
+						<div class="field text">
+							<label for="last_name">Last Name</label>
+							<input type="text" id="last_name" />
+						</div>
+						
+						<div class="field select">
+							<label for="date_of_birth">Date of Birth </label>
+							<div class="birth_fields">
+								<select class="month"><option>Month</option></select>
+								<select class="date"><option>Date</option></select>
+								<select class="year"><option>Year</option></select>
+							</div>
+						</div>
+						
+						<div class="field checkbox">
+							<input type="checkbox" id="guardianship" />
+							<label for="guardianship">By checking this box, you certify that you are the legal guardian or parent of the above listed minors.</label>
+						</div>
+						<button id="add_minor">Add Child</button>
+					</fieldset>
+					
+					<!-- ===================== -->
+					<!-- = Waiver Acceptance = -->
+					<!-- ===================== -->
+					<fieldset id="waiver_acceptance">
+						<legend>Get Air Release of Liability Waiver</legend>
+						<div id="waiver_contents">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						
+						<div class="field checkbox">
+							<input type="checkbox" id="user_did_accept_terms">
+							<label for="user_did_accept_terms">I accept Get Air's release of Liability Waiver</label>
+						</div>
+						
+					</fieldset>
+					
+					<fieldset class="sigPad">
+						<legend class="drawItDesc">Signature</legend>
+						<legend class="typeItDesc">Signature</legend>
+						<ul class="sigNav">
+					        <li class="typeIt"><a href="#type-it" class="current">Type It</a></li>
+					        <li class="drawIt"><a href="#draw-it" >Draw It</a></li>
+					        <li class="clearButton"><a href="#clear">Clear</a></li>
+					      </ul>
+						<div class="signature">
+							<!-- <label>Please provide your signature that you accept Get Air's release of Liability Waiver</label> -->
+
+							<div class="sigPad">
+								<div class='field text'>
+									<label for="name">Print your name</label>
+									<input type="text" name="name" id="name" class="name">
+								</div>
+								<div class="sig sigWrapper">
+									<div class="typed"></div>
+									<canvas class="pad" width="198" height="55"></canvas>
+									<input type="hidden" name="output" class="output">
+								</div>
+							</div>
+						</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Submit Your Waiver</legend>
+						<div class="field">
+							<a href="#" id="submit_waiver">Submit Waiver</a>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
